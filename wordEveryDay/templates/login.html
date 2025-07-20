@@ -1,0 +1,39 @@
+{% extends "all.html" %}
+  
+  {% block title %}
+     <title>
+   wordEveryday - Log In
+  </title>
+  {% endblock title %}
+
+  {% block body %}
+
+
+<div class="min-h-screen bg-gradient-to-r from-[#8ad6ff] to-[#f28bff] flex items-center justify-center px-4">
+   <section class="bg-white bg-opacity-90 rounded-xl shadow-lg p-10 max-w-md w-full">
+    <h1 class="text-3xl font-extrabold text-[#004d40] mb-8 text-center">
+     Log in to wordEveryday
+    </h1>
+    <form action="#" method="POST" class="flex flex-col space-y-6" novalidate="">
+     <label class="block">
+      <span class="text-sm font-semibold text-[#004d40]">Email</span>
+      <input aria-label="Email" class="mt-1 block w-full rounded-md border border-[#004d40] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#004d40]" name="email" placeholder="you@example.com" required="" type="email"/>
+     </label>
+     <label class="block">
+      <span class="text-sm font-semibold text-[#004d40]">Password</span>
+      <input aria-label="Password" class="mt-1 block w-full rounded-md border border-[#004d40] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#004d40]" name="password" placeholder="Enter your password" required="" type="password"/>
+     </label>
+     <button class="bg-[#004d40] text-white font-semibold rounded-full px-6 py-3 text-lg hover:bg-[#00332f] focus:outline-none transition" type="submit">
+      Log In
+     </button>
+    </form>
+    <p class="mt-6 text-center text-sm text-[#004d40]">
+     Don't have an account?
+     <a class="text-[#004d40] font-semibold underline hover:text-[#00291f]" href="#">
+      <a href="/signin">Sign In</a>
+     </a>
+    </p>
+   </section>
+  </div>
+
+    {% endblock body %}

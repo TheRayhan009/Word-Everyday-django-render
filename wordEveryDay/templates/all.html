@@ -1,0 +1,64 @@
+
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  {% block title %}
+   
+  {% endblock title %}
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body>
+  <div class="min-h-screen bg-gradient-to-r from-[#8ad6ff] to-[#f28bff]">
+   <header class="px-4 sm:px-6 lg:px-8">
+    <nav aria-label="Primary Navigation" class="flex items-center justify-between py-4 max-w-7xl mx-auto">
+     <div class="flex items-center space-x-2">
+      <img alt="wordEveryday logo green square with white W letter" class="w-6 h-7" height="28" src="https://storage.googleapis.com/a1aa/image/60607937-9f0c-472c-cf6d-d4fb9732524e.jpg" width="24"/>
+      <span class="font-black italic text-black text-xl select-none">
+       
+       <a href="/">wordEveryday</a>
+      </span>
+     </div>
+     <ul class="hidden md:flex space-x-6 text-sm text-black font-normal">
+      <li class="cursor-pointer hover:underline">
+       <a href="/">Home</a>
+      </li>
+      <li class="cursor-pointer hover:underline">
+       <a href="/about">About</a>
+      </li>
+      <li class="cursor-pointer hover:underline">
+       <a href="/contact">Contact</a>
+      </li>
+     </ul>
+     <div class="hidden md:flex items-center space-x-6 text-sm font-normal text-black">
+      <button class="hover:underline focus:outline-none">
+       <a href="/login">Log In</a>
+      </button>
+      <button class="bg-black text-white text-sm font-semibold rounded-full px-4 py-2 hover:bg-gray-900 focus:outline-none">
+       Start free trial
+      </button>
+     </div>
+     <button aria-label="Open menu" class="md:hidden text-black focus:outline-none" type="button">
+      <i class="fas fa-bars text-xl">
+      </i>
+     </button>
+    </nav>
+   </header>
+   {% block body %}
+     
+   {% endblock body %}
+
+
+ </body>
+</html>

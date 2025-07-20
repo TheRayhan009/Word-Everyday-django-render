@@ -1,0 +1,119 @@
+{% extends "all.html" %}
+  
+  {% block title %}
+     <title>
+   wordEveryday - Daily Word and Meaning
+  </title>
+  {% endblock title %}
+
+  {% block body %}
+    
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20 flex flex-col items-center gap-12 text-center">
+    <section class="bg-[#e0f7fa] rounded-xl shadow-lg p-10 w-full max-w-3xl">
+     <h3 class="text-xs font-bold uppercase text-[#00796b] select-none mb-2">
+      WORD OF THE DAY
+     </h3>
+     <h1 class="text-5xl font-extrabold text-[#004d40] leading-tight mb-4 select-text" id="word">
+      ???
+     </h1>
+     <p class="text-lg text-[#004d40] max-w-3xl mx-auto mb-6" id="meaning">
+      
+     </p>
+     <button class="bg-[#004d40] text-white font-semibold rounded-full px-6 py-3 text-lg hover:bg-[#00332f] focus:outline-none transition" id="newWordBtn" onclick="loadnewword()">
+      Give Me My Word!😫
+     </button>
+    </section>
+   </main>
+   <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-center text-xs text-black/70 select-none">
+    © 2024 wordEveryday. All rights reserved.
+   </footer>
+  </div>
+
+  <script>
+const wordEl = document.getElementById('word');
+const meaningEl = document.getElementById('meaning');
+
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  
+  function loadnewword() {
+    wordEl.textContent = "Searching.....";   
+    meaningEl.textContent = "";  
+  fetch('http://127.0.0.1:8000/nword')
+      .then(res => res.json())
+      .then(data  => {
+        wordEl.textContent = "So close...";
+        console.log(data);
+        sleep(3000);
+        wordEl.textContent = data.main_word;   
+        meaningEl.textContent = data.meaning;
+      })
+       
+  }
+
+
+  </script>
+  <!-- <script>
+   const words = [
+    {
+      word: "Serendipity",
+      meaning: "The occurrence and development of events by chance in a happy or beneficial way."
+    },
+    {
+      word: "Ephemeral",
+      meaning: "Lasting for a very short time."
+    },
+    {
+      word: "Petrichor",
+      meaning: "A pleasant smell that frequently accompanies the first rain after a long period of warm, dry weather."
+    },
+    {
+      word: "Ethereal",
+      meaning: "Extremely delicate and light in a way that seems too perfect for this world."
+    },
+    {
+      word: "Limerence",
+      meaning: "The state of being infatuated or obsessed with another person, typically experienced involuntarily."
+    },
+    {
+      word: "Solitude",
+      meaning: "The state or situation of being alone."
+    },
+    {
+      word: "Mellifluous",
+      meaning: "A sound that is sweet and smooth, pleasing to hear."
+    },
+    {
+      word: "Ineffable",
+      meaning: "Too great or extreme to be expressed or described in words."
+    },
+    {
+      word: "Sonorous",
+      meaning: "Capable of producing a deep or ringing sound."
+    },
+    {
+      word: "Halcyon",
+      meaning: "Denoting a period of time in the past that was idyllically happy and peaceful."
+    }
+   ];
+
+   const wordEl = document.getElementById('word');
+   const meaningEl = document.getElementById('meaning');
+   const btn = document.getElementById('newWordBtn');
+
+   function getRandomWord() {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    return words[randomIndex];
+   }
+
+   btn.addEventListener('click', () => {
+    const { word, meaning } = getRandomWord();
+    wordEl.textContent = word;
+    meaningEl.textContent = meaning;
+   });
+  </script> -->
+
+  {% endblock body %}

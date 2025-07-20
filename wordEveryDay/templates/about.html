@@ -1,0 +1,76 @@
+
+{% extends "all.html" %}
+  
+  {% block title %}
+     <title>
+   wordEveryday - About
+  </title>
+  {% endblock title %}
+
+  {% block body %}
+
+
+  {% csrf_token %}
+
+   <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20 flex flex-col gap-10 text-black">
+    <section class="bg-white bg-opacity-80 rounded-xl shadow-lg p-10 w-full max-w-3xl mx-auto">
+     <h1 class="text-4xl font-extrabold text-[#004d40] mb-6 text-center">
+      About wordEveryday
+     </h1>
+     <p class="text-lg mb-6 leading-relaxed">
+      Welcome to
+      <span class="font-semibold">
+       wordEveryday
+      </span>
+      , your daily source of inspiration and knowledge through words. Our website is designed to provide you with a new word every day, along with its meaning, helping you expand your vocabulary and enrich your language skills effortlessly.
+     </p>
+     <p class="text-lg mb-6 leading-relaxed">
+      This project was created with the goal of making learning new words fun, easy, and accessible to everyone. Whether you are a student, a professional, or simply a language enthusiast,
+      <span class="font-semibold">
+       wordEveryday
+      </span>
+      offers a simple and elegant way to discover interesting words and their meanings daily.
+     </p>
+     <p class="text-lg mb-6 leading-relaxed">
+      With
+      <span class="font-semibold">
+       wordEveryday
+      </span>
+      , you can:
+     </p>
+     <ul class="list-disc list-inside text-lg mb-6 space-y-2">
+      <li>
+       Learn a new word every day with clear and concise definitions.
+      </li>
+      <li>
+       Improve your vocabulary for writing, speaking, and comprehension.
+      </li>
+      <li>
+       Explore words that can inspire creativity and effective communication.
+      </li>
+      <li>
+       Use the website as a daily learning tool or a quick reference guide.
+      </li>
+     </ul>
+     <p class="text-lg leading-relaxed mb-10">
+      We are committed to continuously improving the website and adding more features to enhance your learning experience. Thank you for visiting
+      <span class="font-semibold">
+       wordEveryday
+      </span>
+      — we hope you enjoy expanding your vocabulary with us!
+     </p>
+     <div class="flex flex-col items-center space-y-4">
+      <img alt="Developer profile photo of a smiling person with short hair wearing a blue shirt" class="w-32 h-32 rounded-full object-cover shadow-lg" height="128" src="https://scontent.fcgp27-1.fna.fbcdn.net/v/t39.30808-6/514092540_759230746439265_7652757954066688593_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QCozufxTC-AQ7kNvwE36yoI&_nc_oc=Adn7HvGu9tuvwB3GH0uB2KcAa_1e31zUXrkn16tBudNJRv-OWG8p895NWF8gMScRQcU&_nc_zt=23&_nc_ht=scontent.fcgp27-1.fna&_nc_gid=8qXi_DpHhUlkHTlICOXqAA&oh=00_AfPz0TMqxN1Vgf93ma-o51PMDVQ-fEEUBKIRy3-8GzfCaQ&oe=68655E04" width="128"/>
+      <p class="text-center text-sm text-gray-700 max-w-xs">
+       Developed by Jane Doe, passionate about language and technology, dedicated to making learning enjoyable and accessible for everyone.
+      </p>
+     </div>
+    </section>
+   </main>
+   <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-center text-xs text-black/70 select-none">
+    © 2024 wordEveryday. All rights reserved.
+   </footer>
+  </div>
+
+
+  {% endblock body %}

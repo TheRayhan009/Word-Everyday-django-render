@@ -1,0 +1,75 @@
+
+{% extends "all.html" %}
+  
+  {% block title %}
+     <title>
+   wordEveryday - Contact
+  </title>
+  {% endblock title %}
+
+  {% block body %}
+
+
+   <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20 flex flex-col items-center gap-12 text-center">
+    <section class="bg-[#e0f7fa] rounded-xl shadow-lg p-10 w-full max-w-3xl">
+     <h1 class="text-4xl font-extrabold text-[#004d40] mb-6">
+      Contact Us
+     </h1>
+     <p class="text-lg text-[#004d40] mb-8">
+      We'd love to hear from you! Connect with us on social media or send a message.
+     </p>
+     <div class="flex flex-wrap justify-center gap-6 mb-6">
+      <a href="https://codeforces.com" target="_blank" rel="noopener" class="flex items-center space-x-3 bg-[#1f2937] hover:bg-[#111827] text-white font-semibold rounded-full px-6 py-3 transition shadow-md">
+       <i class="fas fa-code fa-lg"></i>
+       <span>Codeforces</span>
+      </a>
+      <a href="https://github.com" target="_blank" rel="noopener" class="flex items-center space-x-3 bg-[#24292e] hover:bg-[#171a1d] text-white font-semibold rounded-full px-6 py-3 transition shadow-md">
+       <i class="fab fa-github fa-lg"></i>
+       <span>GitHub</span>
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" class="flex items-center space-x-3 bg-[#1877f2] hover:bg-[#145dbf] text-white font-semibold rounded-full px-6 py-3 transition shadow-md">
+       <i class="fab fa-facebook-f fa-lg"></i>
+       <span>Facebook</span>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="flex items-center space-x-3 bg-gradient-to-tr from-[#f58529] via-[#dd2a7b] to-[#8134af] hover:opacity-90 text-white font-semibold rounded-full px-6 py-3 transition shadow-md">
+       <i class="fab fa-instagram fa-lg"></i>
+       <span>Instagram</span>
+      </a>
+      <a href="mailto:contact@wordeveryday.com" class="flex items-center space-x-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full px-6 py-3 transition shadow-md">
+       <i class="fas fa-envelope fa-lg"></i>
+       <span>Gmail</span>
+      </a>
+      <a href="tel:+1234567890" class="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full px-6 py-3 transition shadow-md">
+       <i class="fas fa-phone fa-lg"></i>
+       <span>Phone: +1 234 567 890</span>
+      </a>
+     </div>
+     <div class="mb-10 text-sm text-[#004d40] italic">
+      Or send us a message using the form below:
+     </div>
+     <form class="flex flex-col space-y-6 text-left" action="#" method="POST" novalidate="">
+      <label class="block">
+       <span class="text-sm font-semibold text-[#004d40]">Name</span>
+       <input aria-label="Name" class="mt-1 block w-full rounded-md border border-[#004d40] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#004d40]" name="name" placeholder="Your full name" required="" type="text"/>
+      </label>
+      <label class="block">
+       <span class="text-sm font-semibold text-[#004d40]">Email</span>
+       <input aria-label="Email" class="mt-1 block w-full rounded-md border border-[#004d40] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#004d40]" name="email" placeholder="you@example.com" required="" type="email"/>
+      </label>
+      <label class="block">
+       <span class="text-sm font-semibold text-[#004d40]">Message</span>
+       <textarea aria-label="Message" class="mt-1 block w-full rounded-md border border-[#004d40] px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#004d40]" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+      </label>
+      <button class="bg-[#004d40] text-white font-semibold rounded-full px-6 py-3 text-lg hover:bg-[#00332f] focus:outline-none transition" type="submit">
+       Send Message
+      </button>
+     </form>
+    </section>
+   </main>
+   <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-center text-xs text-black/70 select-none">
+    © 2024 wordEveryday. All rights reserved.
+   </footer>
+  </div>
+
+
+  {% endblock body %}
